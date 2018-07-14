@@ -94,11 +94,11 @@ public class MainActivity extends AppCompatActivity {
 
             TextView displayView =  findViewById(R.id.content);
             displayView.setText("Number of rows in inventory database table: " + cursor.getCount() + " products. \n\n");
-            displayView.append("\n" + InventoryEntry._ID + "-"
-                    + InventoryEntry.COLUMN_PRODUCT_NAME + "-"
-                    + InventoryEntry.COLUMN_PRODUCT_PRICE + "-"
-                    + InventoryEntry.COLUMN_PRODUCT_QUANTITY + "-"
-                    + InventoryEntry.COLUMN_PRODUCT_SUPPLIER_NAME + "-"
+            displayView.append("\n" + InventoryEntry._ID + " - "
+                    + InventoryEntry.COLUMN_PRODUCT_NAME + " - "
+                    + InventoryEntry.COLUMN_PRODUCT_PRICE + " - "
+                    + InventoryEntry.COLUMN_PRODUCT_QUANTITY + " - "
+                    + InventoryEntry.COLUMN_PRODUCT_SUPPLIER_NAME + " - "
                     + InventoryEntry.COLUMN_PRODUCT_SUPPLIER_PHONE + "\n\n");
 
             while (cursor.moveToNext()){
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 String currentSupplierName = cursor.getString(supplierNameColumnIndex);
                 String currentSupplierPhone = cursor.getString(supplierPhoneColumnIndex);
 
-                displayView.append("\n" + currentID + "-" + currentProductName + "-" + String.valueOf(currentProductPrice) + "-" + String.valueOf(currentProductQuantity) + "-" + currentSupplierName + "-" + currentSupplierPhone);
+                displayView.append("\n" + currentID + " - " + currentProductName + " - " + String.valueOf(currentProductPrice) + " - " + String.valueOf(currentProductQuantity) + " - " + currentSupplierName + " - " + currentSupplierPhone);
             }
 
 
